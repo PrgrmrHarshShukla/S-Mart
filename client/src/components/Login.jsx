@@ -68,6 +68,7 @@ function Login() {
         <button className="bg-yellow-500 rounded border-2 border-black border-solid p-1 w-1/2" onClick={register}>Create New Account</button>
 
       </div>
+      {error && <div>{error}</div>}
 
     </div>
   )
