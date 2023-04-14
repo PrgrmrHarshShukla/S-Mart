@@ -127,7 +127,7 @@ function Payment() {
 
          <strong className="w-1/4 text-left">Proceed with Payment</strong>
          <div className="w-3/4 text-left px-4">
-           <form onSubmit = {handleSubmit}>
+           <form onSubmit = {handleSubmit} className="flex flex-col gap-4">
             <CardElement onChange = {handleChange} />
             <div>
               <CurrencyFormat
@@ -145,7 +145,7 @@ function Payment() {
                  thousandSeparator = {true}
                  prefix = {"$"}
               />
-              <button className="rounded border-2 border-black  bg-sky-400 p-1" disabled = {processing || disabled ||  succeeded}>
+              <button className="rounded border-2 border-black  bg-sky-400 p-1 mt-4" disabled = {processing || disabled ||  succeeded}>
                  <span>
                     {processing ? <p>Processing</p> : "Pay Now"}
                  </span>
