@@ -4,12 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAOouXJH0qvJX6nb2R6Yqhz2hNLZZtnoLo",
-  authDomain: "fir-mart-5971d.firebaseapp.com",
-  projectId: "fir-mart-5971d",
-  storageBucket: "fir-mart-5971d.appspot.com",
-  messagingSenderId: "341536633596",
-  appId: "1:341536633596:web:3928103310718f3dcadd79"   
+  apiKey: "AIzaSyAyyN9R2eZ6R2YVTWSVPlW3Fz_F0cVwuaI",
+  authDomain: "fir-mart-58b2d.firebaseapp.com",
+  projectId: "fir-mart-58b2d",
+  storageBucket: "fir-mart-58b2d.appspot.com",
+  messagingSenderId: "410115590619",
+  appId: "1:410115590619:web:b9b3c19e637f024c75fffe"   
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
