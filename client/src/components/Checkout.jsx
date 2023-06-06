@@ -15,7 +15,7 @@ function Checkout() {
 
       <div className="w-auto h-[50vh]">
 
-        <img className="w-full h-full mix-blend-darken" src="https://images.unsplash.com/photo-1502355984-b735cb2550ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhbmslMjB5b3V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" alt="Thank You Note" />  
+        <img className="w-full h-full " src="src/assets/thanks.png" alt="Thank You Note" />  
               
       </div>
 

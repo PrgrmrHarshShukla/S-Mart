@@ -24,7 +24,7 @@ function Header() {
 
       <div>
         <Link to="/">
-          <img className="z-0 h-12 w-20 mix-blend-darken" src="https://w7.pngwing.com/pngs/384/470/png-transparent-retail-computer-icons-e-commerce-sales-mega-offer-miscellaneous-service-logo.png" alt="Site Logo" title="Go to Home Page" />
+          <img className="z-0 h-12 w-20 " src="src/assets/logo.png" alt="Site Logo" title="Go to Home Page" />
         </Link>
       </div>
       

@@ -48,12 +48,12 @@ function Login() {
       </Link>
 
 
-      <div className="flex flex-col items-center border-black border-2 border-solid max-w-9xl w-[50vw] text-center gap-12 p-2">
+      <div className="flex flex-col items-center border-black border-2 border-solid max-w-9xl w-[50vw] text-center gap-12 p-2 rounded">
 
         <strong className="text-2xl"><u>Sign in</u></strong>
 
         
-        <form className="flex flex-col justify-center text-left">
+        <form className=" flex flex-col justify-center text-left">
 
           <p>E-mail</p>
           <input className="mb-4 p-1 rounded w-full border-2 border-black border-solid" type="text" value={email} onChange={(event) => setEmail(event.target.value)} />
