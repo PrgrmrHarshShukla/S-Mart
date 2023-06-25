@@ -6,10 +6,12 @@ import './App.css'
 
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
+import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 
 
 function Header() {
   const [{ basket, user } , dispatch] = useStateValue();
+  const storage = getStorage()
   
 
   const handleAuthentication = () => {
@@ -18,13 +20,19 @@ function Header() {
     }
   }
 
+  const getImages = async () => {
+    const url1 = await getDownloadURL(ref(storage, "gs://fir-mart-5971d.appspot.com/logo.png"))
+    document.getElementById("logo").setAttribute("src", url1)
+  }
+  getImages()
+
 
   return (
     <div className="fixed flex flex-row gap-1 justify-between items-center bg-slate-100 border-b-2 border-solid border-black z-20 w-screen h-16 px-20">
 
       <div>
         <Link to="/">
-          <img className="z-0 h-12 w-20 " src="src/assets/logo.png" alt="Site Logo" title="Go to Home Page" />
+          <img id="logo" className="z-0 h-12 w-20 " alt="Site Logo" title="Go to Home Page" />
         </Link>
       </div>
       

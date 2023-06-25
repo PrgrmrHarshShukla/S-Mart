@@ -5,17 +5,26 @@ import './App.css'
 import Subtotal from './Subtotal'
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider';
+import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 
 function Checkout() {
 
   const [{ basket, user }, dispatch] = useStateValue(); 
+
+  const storage = getStorage()
+
+  const getImages = async () => {
+    const url1 = await getDownloadURL(ref(storage, "gs://fir-mart-5971d.appspot.com/thanks.png"))
+    document.getElementById("header").setAttribute("src", url1)
+  }
+  getImages()
 
   return (
     <div className="flex flex-col gap-4 min-h-screen h-auto items-center mb-4  w-11/12 overflow-hidden">
 
       <div className="w-auto h-[50vh]">
 
-        <img className="w-full h-full " src="src/assets/thanks.png" alt="Thank You Note" />  
+        <img className="w-full h-full " id="header" alt="Thank You Note" />  
               
       </div>
 

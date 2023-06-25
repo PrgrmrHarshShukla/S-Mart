@@ -3,14 +3,24 @@ import React from 'react'
 import './App.css'
 
 import Product from './Product'
+import { getDownloadURL, getStorage, ref } from 'firebase/storage'
 
 function Home() {
+  const storage = getStorage()
+
+  const getImages = async () => {
+    const url1 = await getDownloadURL(ref(storage, "gs://fir-mart-5971d.appspot.com/s-mart_header.png"))
+    document.getElementById("header").setAttribute("src", url1)
+  }
+  getImages()
+
+
   return (
   <div className="flex flex-col relative gap-28 bg-slate-300 w-11/12 z-1">
 
 
     <div className="flex justify-center mt-16">
-      <img src="src\assets\s-mart_header.png" alt="Customers" className="w-screen h-96 object-contain z-0" />
+      <img id="header" alt="Customers" className="w-screen h-96 object-contain z-0" />
     </div>  
 
     <div className="flex flex-row justify-evenly gap-4 px-2 -mt-16">
