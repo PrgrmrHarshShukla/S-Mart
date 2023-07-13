@@ -16,6 +16,7 @@ import { useStateValue } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import Empty from './Empty';
+import Register from './Register';
 
 const promise = loadStripe('pk_test_51MvcWrSDgT7bpXx6aQKqIYZ6XWWdQAbjvvf0HRpBTZgqWgv0zkDPLmuaD8Qy4eEidTDS14PGeUsRg2Bh4BGvGKis00tw0w9w4U');
  
@@ -56,10 +57,11 @@ function App() {
     <div className="relative flex flex-col items-center bg-slate-300 mix-blend-color-burn h-auto">
         <Router>
           <Routes>
-            <Route exact path="/" element = {[<Header />, <Home />]} />
+            <Route exact path="/" element = {[<Header key="1" />, <Home key="2" />]} />
             <Route exact path="/orders" element = {<Orders />} />
             <Route exact path="/login" element = {<Login />} />
-            <Route exact path="/checkout" element = {[<Header />, <Checkout />]} />
+            <Route exact path="/register" element = {<Register />} />
+            <Route exact path="/checkout" element = {[<Header key="1" />, <Checkout key="2" />]} />
             {
               user ?
                 <Route 
@@ -71,7 +73,7 @@ function App() {
                     </Elements>
                   ]} />
               :
-                <Route exact path="/payment" element = {[<Header />, <Empty />]} />
+                <Route exact path="/payment" element = {[<Header key="1" />, <Empty key="2" />]} />
             }
           </Routes>
         </Router>

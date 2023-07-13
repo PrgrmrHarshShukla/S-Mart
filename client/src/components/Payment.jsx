@@ -42,8 +42,8 @@ function Payment() {
     getClientSecret();
   }, [basket])
 
-  console.log('The secret is **', clientSecret)
-  console.log('The **user** is ', user)
+  // console.log('The secret is **', clientSecret)
+  // console.log('The **user** is ', user)
 
   const handleSubmit = async (event) => {
     event.preventDefault();   

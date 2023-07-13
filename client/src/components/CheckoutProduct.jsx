@@ -18,15 +18,15 @@ function CheckoutProduct({ id, image, title, price, rating }) {
   return (
     <div className="flex flex-row gap-4 px-4">
 
-      <img className="w-3/5 h-full max-h-[30vh] max-w-[20vw]" src={image} alt="Product Image" />      
+      <img className="sm:w-80 w-40 sm:h-80 max-h-[30vh] max-w-[40vw] sm:max-w-[20vw]" src={image} alt="Product Image" />      
 
-      <div className="flex flex-col justify-evenly items-center max-h-[30vh] max-w-[20vw]">
+      <div className="flex flex-col justify-evenly items-start max-h-[30vh] max-w-[40vw] sm:max-w-[20vw]">
 
          <div>
-            <p>{title}</p>
+            <p className="sm:text-[18px] text-[14px] font-semibold">{title}</p>
             <p>
                <small>$ </small>
-               <strong>{price}</strong>
+               <strong className="font-bold text-[]14px sm:text-[18px]">{price}</strong>
             </p>
             <div className="flex">
                {Array(rating)
@@ -38,7 +38,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
          </div>
 
          
-         <button className="p-1 border-2 border-black rounded bg-yellow-500" onClick = {removeFromBasket}>Remove From Basket</button>
+         <button className="p-1 border-2 border-black rounded bg-yellow-500" onClick = {removeFromBasket}>Remove</button>
          
       </div>
 

@@ -16,7 +16,7 @@ function Subtotal() {
 
 
   return (
-    <div className="flex flex-col gap-2 justify-evenly">
+    <div className="flex flex-col gap-2 justify-evenly mt-2">
       <CurrencyFormat
 
         renderText = {(value) => ( 
@@ -25,9 +25,9 @@ function Subtotal() {
               Subtotal ({basket.length} items) :  
               <strong> {value}</strong>
             </p>
-            <small className="flex flex-row gap-2 justify-center">
+            {/* <small className="flex flex-row gap-2 justify-center">
               <input type="checkbox" /> This order contains a gift
-            </small>
+            </small> */}
           </>
         )}
 
@@ -39,7 +39,7 @@ function Subtotal() {
 
       />
 
-      <button className="border-2 border-black rounded bg-yellow-500" onClick = {() => navigate('/payment')}>Proceed to Checkout</button>
+      <button className="border-2 border-black rounded mt-4 mb-2 active:bg-yellow-600 bg-yellow-500" onClick = {() => navigate('/payment')}>Proceed to Checkout</button>
     </div>
   )
 }
