@@ -3,27 +3,33 @@ import React from 'react'
 import './App.css'
 
 import Product from './Product'
-import { getDownloadURL, getStorage, ref } from 'firebase/storage'
+// import { getDownloadURL, ref } from 'firebase/storage'
+// import { storage } from './firebase'
+import head from "./s-mart_header.png"
+
+
 
 function Home() {
-  const storage = getStorage()
+  // const storage = getStorage()
 
-  const getImages = async () => {
-    const url1 = await getDownloadURL(ref(storage, "gs://fir-mart-5971d.appspot.com/s-mart_header.png"))
-    document.getElementById("header").setAttribute("src", url1)
-  }
-  getImages()
+  // useEffect(() => {
+  //   const getImages = async () => {
+  //     const url1 = await getDownloadURL(ref(storage, "gs://fir-mart-5971d.appspot.com/s-mart_header.png"))
+  //     document.getElementById("header").setAttribute("src", url1)
+  //   }
+  //   getImages()
+  // }, [])
 
 
   return (
-  <div className="flex flex-col relative gap-28 bg-slate-300 w-11/12 z-1">
+  <div className="flex flex-col items-center gap-28 bg-slate-300 sm:w-11/12 w-[100vw] p-4 sm:p-2 z-1">
 
 
     <div className="flex justify-center mt-16">
-      <img id="header" alt="Customers" className="w-screen h-96 object-contain z-0" />
+      <img src={head} id="header" alt="Customers" className="w-screen h-[35vh] sm:h-96 object-contain z-0" />
     </div>  
 
-    <div className="flex flex-row justify-evenly gap-4 px-2 -mt-16">
+    <div className="flex flex-col sm:flex-row justify-center sm:justify-evenly gap-4 sm:px-2 -mt-16">
 
       <Product 
       id="237452874" 
@@ -50,7 +56,7 @@ function Home() {
     </div>
 
 
-    <div className="flex justify-evenly flex-row gap-4 px-2">
+    <div className="flex justify-center sm:justify-evenly flex-col sm:flex-row gap-4 sm:px-2">
 
       <Product 
       id="531562389"
@@ -76,7 +82,7 @@ function Home() {
     </div>
       
 
-    <div className="flex justify-center px-2">
+    <div className="flex justify-center sm:px-2">
 
       <Product 
       id="4567519665"

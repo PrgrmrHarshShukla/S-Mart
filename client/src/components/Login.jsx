@@ -19,8 +19,9 @@ function Login() {
       const user = userCredential.user;
       // console.log("User logged in:", user);
       navigate("/");
+      alert("You have been signed in successfully.")
     } catch (error) {
-      console.error("Error logging in:", error);
+      alert("An unexpected login error occured: ", error);
     }
   };
 
@@ -32,10 +33,11 @@ function Login() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      console.log("New user registered:", user);
+      // console.log("New user registered:", user);
       navigate("/");
+      alert("Your account has been created successfully.")
     } catch (error) {
-      console.error("Error registering new user:", error);
+      alert("An unexpected error occured: ", error);
     }
   };
 
